@@ -27,14 +27,14 @@ public class TestController {
         return "황성민";
     }
 
-    @GetMapping("/{id}")
+    @GetMapping("/{id}") // test/123
     public String testControllerWithPathVariables(@PathVariable(required = false) int id) { // PathVariable annotation
                                                                                             // 사용
                                                                                             // 필수!
         return "Hello World! ID " + id;
     }
 
-    @GetMapping("/testRequestParam")
+    @GetMapping("/testRequestParam") // test/testRequestParam?id=123
     public String testControllerRequestParam(@RequestParam(required = false) int id) {// @RequestParam annotation 사용
                                                                                       // 필수!
         return "Hello World! ID " + id;
