@@ -27,7 +27,7 @@ public class TokenProvider {
                 .setSubject(userEntity.getId())
                 .setIssuer("DEMO APP")
                 .setIssuedAt(new Date())
-                .setExpiration(new Date())
+                .setExpiration(expiryDate)
                 .compact();
     }
 
